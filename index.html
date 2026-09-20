@@ -11,7 +11,7 @@
 <body>
 <header class="header">
   <div class="container nav">
-    <a class="brand" href="#home" aria-label="ALLGOFIX Home"><img src="allgofix-icon.png" alt="ALLGOFIX icon"><span class="brand-name">ALL<span>GO</span>FIX</span></a>
+    <a class="brand" href="#home"><img src="allgofix-logo.png" alt="ALLGOFIX"></a>
     <nav class="desktop-nav">
       <a href="#services">Services</a>
       <a href="#how">How It Works</a>
@@ -19,13 +19,6 @@
       <a href="#contact">Contact</a>
     </nav>
     <a class="btn btn-primary nav-book" href="tel:+918758000713">📞 Book Now</a>
-    <button class="mobile-menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" onclick="toggleMobileMenu()"><span></span><span></span><span></span></button>
-    <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
-      <a href="#services" onclick="closeMobileMenu()">Services</a>
-      <a href="#how" onclick="closeMobileMenu()">How It Works</a>
-      <a href="#why" onclick="closeMobileMenu()">Why Us</a>
-      <a href="#contact" onclick="closeMobileMenu()">Contact</a>
-    </nav>
   </div>
 </header>
 
@@ -74,7 +67,7 @@
       <article class="service-card"><div class="service-icon"><img src="ac.png" alt=""></div><h3>AC & Cooling</h3><p>Service, repair, installation, gas charging and AMC.</p><a href="tel:+918758000713">Book AC Service →</a></article>
       <article class="service-card"><div class="service-icon"><img src="electrical.png" alt=""></div><h3>Electrical</h3><p>Fan, light, switch, socket, MCB, wiring and repairs.</p><a href="tel:+918758000713">Book Electrical →</a></article>
       <article class="service-card"><div class="service-icon"><img src="plumbing.png" alt=""></div><h3>Plumbing</h3><p>Tap, mixer, pipe leakage and everyday plumbing repairs.</p><a href="tel:+918758000713">Book Plumbing →</a></article>
-      <article class="service-card"><div class="service-icon"><img src="carpenter.png" alt=""></div><h3>Carpenter</h3><p>Furniture, doors, fittings, drilling and minor carpentry.</p><a href="tel:+918758000713">Book Carpenter →</a></article>
+      <article class="service-card"><div class="service-icon"><img src="carpenter.png" alt=""></div><h3>Carpenter</h3><p>Furniture, doors, fittings, drilling and minor carpentry.</p><a href="tel:+9187580000713">Book Carpenter →</a></article>
       <article class="service-card"><div class="service-icon"><img src="painting.png" alt=""></div><h3>Painting</h3><p>Interior painting, touch-ups, walls and home painting.</p><a href="tel:+918758000713">Book Painting →</a></article>
       <article class="service-card"><div class="service-icon"><img src="cleaning.png" alt=""></div><h3>Home Cleaning</h3><p>Home, kitchen, bathroom and deep-cleaning services.</p><a href="tel:+918758000713">Book Cleaning →</a></article>
       <article class="service-card"><div class="service-icon"><img src="appliances.png" alt=""></div><h3>Home Appliances</h3><p>Washing machine, refrigerator, geyser and appliance repair.</p><a href="tel:+918758000713">Book Appliance Repair →</a></article>
@@ -120,30 +113,11 @@
 
 <footer>
   <div class="container footer">
-    <div><div class="footer-brand"><img src="allgofix-icon.png" alt="ALLGOFIX icon"><span>ALL<span>GO</span>FIX</span></div><p>One Place for Your Everyday Home Service Needs.</p></div>
+    <div><img src="allgofix-logo.png" alt="ALLGOFIX" class="footer-logo"><p>One Place for Your Everyday Home Service Needs.</p></div>
     <div><h4>Services</h4><a href="#services">AC Service & Repair</a><a href="#services">Electrical</a><a href="#services">Plumbing</a><a href="#services">Cleaning</a></div>
     <div><h4>Company</h4><a href="#how">How It Works</a><a href="#why">Why Us</a><a href="#contact">Contact</a></div>
   </div>
   <div class="container copyright">© 2026 ALLGOFIX. All Rights Reserved.</div>
 </footer>
-<script>
-function toggleMobileMenu(){
-  const m=document.getElementById('mobileMenu');
-  const b=document.querySelector('.mobile-menu-toggle');
-  const open=m.classList.toggle('open');
-  b.setAttribute('aria-expanded',open?'true':'false');
-}
-function closeMobileMenu(){
-  const m=document.getElementById('mobileMenu');
-  const b=document.querySelector('.mobile-menu-toggle');
-  m.classList.remove('open');
-  b.setAttribute('aria-expanded','false');
-}
-document.addEventListener('click',function(e){
-  const m=document.getElementById('mobileMenu');
-  const b=document.querySelector('.mobile-menu-toggle');
-  if(m && b && !m.contains(e.target) && !b.contains(e.target)) closeMobileMenu();
-});
-</script>
 </body>
 </html>
