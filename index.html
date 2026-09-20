@@ -11,7 +11,7 @@
 <body>
 <header class="header">
   <div class="container nav">
-    <a class="brand" href="#home"><img src="allgofix-logo.png" alt="ALLGOFIX"></a>
+    <a class="brand" href="#home" aria-label="ALLGOFIX Home"><img src="allgofix-icon.png" alt="ALLGOFIX icon"><span class="brand-name">ALL<span>GO</span>FIX</span></a>
     <nav class="desktop-nav">
       <a href="#services">Services</a>
       <a href="#how">How It Works</a>
@@ -19,7 +19,7 @@
       <a href="#contact">Contact</a>
     </nav>
     <a class="btn btn-primary nav-book" href="tel:+918758000713">📞 Book Now</a>
-    <button class="mobile-menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" onclick="toggleMobileMenu()">⋮</button>
+    <button class="mobile-menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" onclick="toggleMobileMenu()"><span></span><span></span><span></span></button>
     <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
       <a href="#services" onclick="closeMobileMenu()">Services</a>
       <a href="#how" onclick="closeMobileMenu()">How It Works</a>
@@ -120,7 +120,7 @@
 
 <footer>
   <div class="container footer">
-    <div><img src="allgofix-logo.png" alt="ALLGOFIX" class="footer-logo"><p>One Place for Your Everyday Home Service Needs.</p></div>
+    <div><div class="footer-brand"><img src="allgofix-icon.png" alt="ALLGOFIX icon"><span>ALL<span>GO</span>FIX</span></div><p>One Place for Your Everyday Home Service Needs.</p></div>
     <div><h4>Services</h4><a href="#services">AC Service & Repair</a><a href="#services">Electrical</a><a href="#services">Plumbing</a><a href="#services">Cleaning</a></div>
     <div><h4>Company</h4><a href="#how">How It Works</a><a href="#why">Why Us</a><a href="#contact">Contact</a></div>
   </div>
