@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 360">
+<defs>
+  <linearGradient id="roof" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffb14d"/><stop offset="1" stop-color="#f36b16"/></linearGradient>
+  <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ffffff"/><stop offset="1" stop-color="#eaf3ff"/></linearGradient>
+  <linearGradient id="side" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#dcecff"/><stop offset="1" stop-color="#a9c8ed"/></linearGradient>
+  <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="18" stdDeviation="16" flood-color="#173b80" flood-opacity=".22"/></filter>
+  <filter id="soft" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="7" stdDeviation="7" flood-color="#173b80" flood-opacity=".18"/></filter>
+</defs>
+<ellipse cx="212" cy="326" rx="132" ry="17" fill="#173b80" opacity=".10"/>
+<g filter="url(#shadow)">
+  <path d="M55 156 210 35l155 121-28 36-127-97L83 192z" fill="url(#roof)"/>
+  <path d="M83 177 210 80l127 97v112H83z" fill="url(#wall)" stroke="#173b80" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M337 177 365 157v112l-28 20z" fill="url(#side)" stroke="#173b80" stroke-width="8" stroke-linejoin="round"/>
+</g>
+<g filter="url(#soft)">
+  <rect x="112" y="181" width="52" height="49" rx="9" fill="#bde3ff" stroke="#2362e3" stroke-width="7"/>
+  <rect x="256" y="181" width="52" height="49" rx="9" fill="#bde3ff" stroke="#2362e3" stroke-width="7"/>
+  <path d="M178 289v-73h64v73" fill="#f47a1f" stroke="#173b80" stroke-width="7" stroke-linejoin="round"/>
+  <circle cx="229" cy="253" r="4" fill="#fff"/>
+</g>
+<g transform="translate(151 101)" filter="url(#soft)">
+  <circle cx="59" cy="23" r="23" fill="#fff" stroke="#173b80" stroke-width="5"/>
+  <path d="M59 10v27M46 23h26" stroke="#f47a1f" stroke-width="6" stroke-linecap="round"/>
+</g>
+</svg>
