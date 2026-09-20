@@ -32,17 +32,17 @@ a{text-decoration:none;color:inherit}
 .hero-home{position:relative;z-index:6;width:min(370px,54%);max-height:370px;object-fit:contain;filter:drop-shadow(0 25px 25px rgba(20,51,100,.18))}
 
 /* Fixed circular orbit: all 8 icons use the same radius and never overlap the house. */
-.orbit-ring{position:absolute;z-index:8;left:50%;top:50%;width:560px;height:560px;transform:translate(-50%,-50%);pointer-events:none}
+.orbit-ring{position:absolute;z-index:8;left:50%;top:50%;width:500px;height:500px;transform:translate(-50%,-50%);pointer-events:none}
 .orbit-icon{position:absolute;left:50%;top:50%;width:64px;height:64px;margin:-32px;border-radius:50%;background:#fff;border:1px solid #edf2f9;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 28px rgba(24,58,110,.16);animation:none}
 .orbit-icon img{width:43px;height:43px;object-fit:contain}
-.i-ac{transform:translate(-50%,-250px)}
-.i-electrical{transform:translate(126px,-216px)}
-.i-plumbing{transform:translate(250px,-50%)}
-.i-carpenter{transform:translate(126px,116px)}
-.i-painting{transform:translate(-50%,250px)}
-.i-cleaning{transform:translate(-190px,116px)}
-.i-appliances{transform:translate(-250px,-50%)}
-.i-handyman{transform:translate(-190px,-216px)}
+.i-ac{transform:translate(-50%,-220px)}
+.i-electrical{transform:translate(110px,-190px)}
+.i-plumbing{transform:translate(220px,-50%)}
+.i-carpenter{transform:translate(110px,100px)}
+.i-painting{transform:translate(-50%,220px)}
+.i-cleaning{transform:translate(-170px,100px)}
+.i-appliances{transform:translate(-220px,-50%)}
+.i-handyman{transform:translate(-170px,-190px)}
 
 .section{padding:76px 0}
 .section.light{background:#f7faff}
@@ -98,14 +98,14 @@ footer{background:#0d2859;color:#dbe7fa;padding:50px 0 20px}
   .orbit-ring{width:430px;height:430px}
   .orbit-icon{width:58px;height:58px;margin:-29px}
   .orbit-icon img{width:39px;height:39px}
-  .i-ac{transform:translate(-50%,-195px)}
-  .i-electrical{transform:translate(98px,-169px)}
-  .i-plumbing{transform:translate(195px,-50%)}
-  .i-carpenter{transform:translate(98px,111px)}
-  .i-painting{transform:translate(-50%,195px)}
-  .i-cleaning{transform:translate(-156px,111px)}
-  .i-appliances{transform:translate(-195px,-50%)}
-  .i-handyman{transform:translate(-156px,-169px)}
+  .i-ac{transform:translate(-50%,-178px)}
+  .i-electrical{transform:translate(88px,-155px)}
+  .i-plumbing{transform:translate(178px,-50%)}
+  .i-carpenter{transform:translate(88px,100px)}
+  .i-painting{transform:translate(-50%,178px)}
+  .i-cleaning{transform:translate(-138px,100px)}
+  .i-appliances{transform:translate(-178px,-50%)}
+  .i-handyman{transform:translate(-138px,-155px)}
   .service-grid{grid-template-columns:repeat(2,1fr)}
   .steps{grid-template-columns:repeat(2,1fr)}
   .why{grid-template-columns:1fr}
@@ -123,15 +123,88 @@ footer{background:#0d2859;color:#dbe7fa;padding:50px 0 20px}
   .orbit-ring{width:330px;height:330px}
   .orbit-icon{width:48px;height:48px;margin:-24px}
   .orbit-icon img{width:32px;height:32px}
-  .i-ac{transform:translate(-50%,-148px)}
-  .i-electrical{transform:translate(74px,-128px)}
-  .i-plumbing{transform:translate(148px,-50%)}
-  .i-carpenter{transform:translate(74px,80px)}
-  .i-painting{transform:translate(-50%,148px)}
-  .i-cleaning{transform:translate(-122px,80px)}
-  .i-appliances{transform:translate(-148px,-50%)}
-  .i-handyman{transform:translate(-122px,-128px)}
+  .i-ac{transform:translate(-50%,-132px)}
+  .i-electrical{transform:translate(66px,-115px)}
+  .i-plumbing{transform:translate(132px,-50%)}
+  .i-carpenter{transform:translate(66px,70px)}
+  .i-painting{transform:translate(-50%,132px)}
+  .i-cleaning{transform:translate(-116px,70px)}
+  .i-appliances{transform:translate(-132px,-50%)}
+  .i-handyman{transform:translate(-116px,-115px)}
   .service-grid,.steps{grid-template-columns:1fr}
   .footer{grid-template-columns:1fr}
   .section{padding:55px 0}
+}
+
+
+/* FINAL MOBILE POLISH */
+@media(max-width:560px){
+  .header{height:70px}
+  .nav{position:relative;justify-content:flex-start}
+  .brand img{width:120px}
+  .nav-book{
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    padding:11px 22px;
+    min-width:142px;
+    font-size:14px;
+    white-space:nowrap;
+  }
+
+  /* Center the Services heading/link on mobile */
+  .section-head{
+    display:block;
+    text-align:center;
+    margin-bottom:28px;
+  }
+  .section-head h2{
+    font-size:30px;
+    line-height:1.2;
+  }
+  .section-head>a{
+    display:inline-block;
+    margin-top:12px;
+  }
+
+  /* Service cards: remove the pale circular background; show only the icon */
+  .service-icon{
+    background:transparent !important;
+    border:0 !important;
+    box-shadow:none !important;
+    width:82px;
+    height:82px;
+    margin-bottom:14px;
+  }
+  .service-icon img{
+    width:72px;
+    height:72px;
+    object-fit:contain;
+  }
+
+  /* Keep all hero orbit icons on one equal-radius level around the home */
+  .hero-visual{
+    height:365px;
+    margin-top:0;
+  }
+  .orbit-ring{
+    width:300px;
+    height:300px;
+  }
+
+  /* White backing behind the blue footer logo so it remains clearly visible */
+  .footer-logo{
+    background:#fff;
+    border-radius:10px;
+    padding:8px 12px;
+    width:170px;
+    height:auto;
+    object-fit:contain;
+  }
+}
+
+.service-icon{
+  background:transparent !important;
+  border:0 !important;
+  box-shadow:none !important;
 }
