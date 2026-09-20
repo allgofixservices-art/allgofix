@@ -199,7 +199,7 @@ footer{background:#031d45;color:#fff;margin-top:30px}.footer-grid{display:grid;g
   text-shadow:none;
 }
 
-/* 3D image service icons */
+/* 3D image service icons - uniform circular frame */
 .service-icon.image-icon{
   width:92px;
   height:92px;
@@ -211,14 +211,19 @@ footer{background:#031d45;color:#fff;margin-top:30px}.footer-grid{display:grid;g
   border:0;
   box-shadow:none;
   border-radius:50%;
-  overflow:visible;
+  overflow:hidden;
+  flex:0 0 92px;
 }
 .service-icon.image-icon img{
   display:block;
   width:92px;
   height:92px;
+  max-width:92px;
+  max-height:92px;
   object-fit:contain;
+  object-position:center;
   border-radius:50%;
+  overflow:hidden;
   filter:drop-shadow(0 8px 10px rgba(18,45,80,.20));
   transition:transform .22s ease, filter .22s ease;
 }
@@ -227,12 +232,3 @@ footer{background:#031d45;color:#fff;margin-top:30px}.footer-grid{display:grid;g
   filter:drop-shadow(0 12px 14px rgba(18,45,80,.26));
 }
 
-/* Home Appliances - clean 3D appliance icon */
-.service-card[data-service="Home Appliances"] .service-icon img{
-  width:78px;
-  height:78px;
-  object-fit:cover;
-  border-radius:50%;
-  display:block;
-  filter:drop-shadow(0 7px 10px rgba(15,40,80,.16));
-}
